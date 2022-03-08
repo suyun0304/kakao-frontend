@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {
+  ChangeEvent,
+  ChangeEventHandler,
+  KeyboardEvent,
+  useEffect,
+} from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Button from "./Button";
+import Title from "./Title";
+import Adult from "./Adult";
+import Text from "./Text";
+import Photo from "./Photo";
+import Counter from "./Counter";
+import Adder from "./Adder";
+import WelcomeName from "./WelcomeName";
+import ConditionalText from "./ConditionalText";
+import HiddenName from "./HiddenName";
+import ToDoList from "./ToDoList";
 
-function App() {
+const App = (): JSX.Element => {
+  useEffect(() => {
+    alert("hello");
+  }, []);
+
+  // const names = ["a", "b", "c"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Counter defaultCount={1} />
+      <Adder />
+      <WelcomeName />
+      <ConditionalText />
+      <HiddenName />
+      {names.map((name, index) => {
+        return <h1 key={index}>{name}</h1>;
+      })} */}
+      <ToDoList />
+    </>
   );
-}
+};
 
 export default App;
